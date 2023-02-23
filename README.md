@@ -37,5 +37,7 @@ git stash drop
 git rebase -i HEAD~n
 # 撤回版本到指定commitId上，在此之后的所有提交都被删除
 git reset commitId
+# 撤回版本到指定commitId上，在此之后的所有提交中关于本次提交的内容都被移除
+git revert commitId
 ```
 
