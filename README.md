@@ -21,5 +21,7 @@ git branch
 git pull
 # 克隆一个远程仓库
 git clone url
+# 合并一次commit到当前分支上，其他分支上修复了bug，在当前分支上直接使用
+git cherry-pick commitId
 ```
 
