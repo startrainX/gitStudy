@@ -35,12 +35,14 @@ git stash apply stashId
 git stash pop
 # 删除隐藏的工作信息
 git stash drop
-# 合并前n次历史提交，会弹出vim修改信息，修改第二行的pick为s(squash)，然后保存退出
+# 合并前n次历史提交，会弹出vim修改信息，修改第n行的pick为s(squash)，然后保存退出
 git rebase -i HEAD~n
-# 撤回版本到指定commitId上，在此之后的所有提交都被删除
+# 撤回版本到指定commitId上，在此之后的所有提交都被删除 （没用好）
 git reset commitId
-# 撤回版本到指定commitId上，在此之后的所有提交中关于本次提交的内容都被移除
+# 撤回版本到指定commitId上，在此之后的所有提交中关于本次提交的内容都被移除 （没用好）
 git revert commitId
 # 处于ing状态的时候，解决冲突后，将文件add然后使用ing的对应命令后加--continue
+# 处于ing状态的时候，放弃修改回到先前的样子
+git revert --abort
 ```
 
