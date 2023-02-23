@@ -35,5 +35,7 @@ git stash pop
 git stash drop
 # 合并前n次历史提交，会弹出vim修改信息，修改第二行的pick为s(squash)，然后保存退出
 git rebase -i HEAD~n
+# 撤回版本到指定commitId上，在此之后的所有提交都被删除
+git reset commitId
 ```
 
